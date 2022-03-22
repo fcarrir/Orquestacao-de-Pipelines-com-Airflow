@@ -15,7 +15,6 @@ data "aws_ami" "ubuntu" {
   owners = ["099720109477"] # Canonical
 }
 
-
 # Instância EC2
 resource "aws_instance" "airflow" {
   ami                         = data.aws_ami.ubuntu.id
